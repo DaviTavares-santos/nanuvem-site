@@ -1,0 +1,327 @@
+index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="naNuvem - Compare passagens aéreas e encontre os melhores preços para suas viagens.">
+    <meta name="keywords" content="passagens aéreas, voos, reservas, viagens, naNuvem">
+    <title>naNuvem - Seu Destino Começa Aqui</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Cloud shape for naNuvem logo -->
+                            <path d="M32 24H28C28 19.6 24.4 16 20 16C16.7 16 13.9 18 12.5 21C10.1 21.3 8 23.4 8 26C8 29 10.5 31.5 13.5 31.5H32C35.3 31.5 38 28.8 38 25.5C38 22.5 35.8 20.1 33 19.8M20 8L22 12L26 12L23 15L24 19L20 16L16 19L17 15L14 12L18 12L20 8Z" fill="url(#gradientCloud)" />
+                            <defs>
+                                <linearGradient id="gradientCloud" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>naNuvem</span>
+                    </div>
+
+                    <!-- Navigation Menu -->
+                    <div class="nav-menu" id="navMenu">
+                        <a href="#home" class="nav-link">Home</a>
+                        <a href="#destinations" class="nav-link">Destinos</a>
+                        <a href="#offers" class="nav-link">Ofertas</a>
+                        <a href="#contact" class="nav-link">Contato</a>
+                    </div>
+
+                    <!-- Login Button -->
+                    <button class="btn-login">Entrar</button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </navbar>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="clouds">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Seu destino começa naNuvem</h1>
+            <p class="hero-subtitle">Compare passagens aéreas, encontre os melhores preços e viaje com mais facilidade.</p>
+        </div>
+    </section>
+
+    <!-- FLIGHT SEARCH FORM -->
+    <section class="search-section">
+        <div class="container">
+            <form class="search-form" id="searchForm" novalidate>
+                <div class="form-group">
+                    <label for="origin">De</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-plane-departure"></i>
+                        <input type="text" id="origin" placeholder="Cidade de partida" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Para</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-plane-arrival"></i>
+                        <input type="text" id="destination" placeholder="Cidade de destino" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="departure">Partida</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-calendar"></i>
+                        <input type="date" id="departure" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="return">Retorno</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-calendar"></i>
+                        <input type="date" id="return">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="passengers">Passageiros</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-users"></i>
+                        <select id="passengers" required>
+                            <option value="">Selecione</option>
+                            <option value="1">1 Passageiro</option>
+                            <option value="2">2 Passageiros</option>
+                            <option value="3">3 Passageiros</option>
+                            <option value="4">4 Passageiros</option>
+                            <option value="5">5 Passageiros</option>
+                            <option value="6">6 Passageiros</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Classe</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-chair"></i>
+                        <select id="class" required>
+                            <option value="">Selecione</option>
+                            <option value="economy">Econômica</option>
+                            <option value="premium">Premium</option>
+                            <option value="business">Business</option>
+                            <option value="first">Primeira Classe</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-search">
+                    <i class="fas fa-search"></i> Buscar voos
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Por que escolher naNuvem?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Melhores Preços</h3>
+                    <p>Comparamos centenas de voos para encontrar as passagens mais baratas do mercado.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Reserva Rápida</h3>
+                    <p>Processo simples e intuitivo para reservar seu voo em poucos segundos.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Suporte 24h</h3>
+                    <p>Equipe disponível a qualquer hora para ajudar com suas dúvidas e problemas.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Destinos Mundiais</h3>
+                    <p>Acesso a milhares de destinos em mais de 200 países ao redor do mundo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POPULAR DESTINATIONS SECTION -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <h2 class="section-title">Destinos Populares</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="destination-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 300\"><text x=\"50%\" y=\"50%\" font-size=\"48\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">🗼</text></svg>');">
+                    </div>
+                    <div class="destination-info">
+                        <h3>Paris</h3>
+                        <p class="destination-price">A partir de <strong>R$ 1.850</strong></p>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 300\"><text x=\"50%\" y=\"50%\" font-size=\"48\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">🏰</text></svg>');">
+                    </div>
+                    <div class="destination-info">
+                        <h3>Lisboa</h3>
+                        <p class="destination-price">A partir de <strong>R$ 950</strong></p>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 300\"><text x=\"50%\" y=\"50%\" font-size=\"48\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">🗽</text></svg>');">
+                    </div>
+                    <div class="destination-info">
+                        <h3>Nova York</h3>
+                        <p class="destination-price">A partir de <strong>R$ 2.200</strong></p>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 300\"><text x=\"50%\" y=\"50%\" font-size=\"48\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">🏜️</text></svg>');">
+                    </div>
+                    <div class="destination-info">
+                        <h3>Dubai</h3>
+                        <p class="destination-price">A partir de <strong>R$ 1.650</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST SECTION -->
+    <section class="trust">
+        <div class="container">
+            <div class="trust-content">
+                <div class="trust-item">
+                    <div class="trust-stat">4.9★</div>
+                    <p>Avaliação média de 50.000+ clientes</p>
+                </div>
+
+                <div class="trust-item">
+                    <i class="fas fa-lock"></i>
+                    <p>Pagamento 100% seguro e criptografado</p>
+                </div>
+
+                <div class="trust-item">
+                    <div class="airline-logos">
+                        <span>✈️</span> <span>✈️</span> <span>✈️</span>
+                    </div>
+                    <p>Parcerias com as maiores companhias aéreas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta">
+        <div class="container">
+            <h2>Pronto para decolar?</h2>
+            <p>Encontre e reserve as melhores passagens aéreas com naNuvem</p>
+            <button class="btn-cta">
+                <i class="fas fa-search"></i> Encontrar passagens
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 24H28C28 19.6 24.4 16 20 16C16.7 16 13.9 18 12.5 21C10.1 21.3 8 23.4 8 26C8 29 10.5 31.5 13.5 31.5H32C35.3 31.5 38 28.8 38 25.5C38 22.5 35.8 20.1 33 19.8M20 8L22 12L26 12L23 15L24 19L20 16L16 19L17 15L14 12L18 12L20 8Z" fill="url(#gradientCloud)" />
+                            <defs>
+                                <linearGradient id="gradientCloud" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>naNuvem</span>
+                    </div>
+                    <p>Viaje com confiança, sempre com os melhores preços.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#destinations">Destinos</a></li>
+                        <li><a href="#offers">Ofertas</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contato@nanuvem.com</li>
+                        <li><i class="fas fa-phone"></i> +55 (11) 3000-0000</li>
+                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 naNuvem. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
